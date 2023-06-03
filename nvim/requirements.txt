@@ -1,0 +1,4 @@
+pynvim
+python-lsp-server[rope]
+ruff-lsp
+black
