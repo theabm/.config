@@ -27,3 +27,12 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 100
 
 vim.opt.colorcolumn = "80"
+
+-- Concealing text for norg custom links
+-- always conceal text
+vim.opt.conceallevel = 2
+-- set modes in which text is concealed when 
+-- cursor line is on top of it. I set it to normal 
+-- and command mode. So in insert and visual mode, 
+-- text will not be concealed any longer.
+vim.opt.concealcursor = "c"

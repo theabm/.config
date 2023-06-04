@@ -141,7 +141,7 @@ _G.packer_plugins = {
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   neorg = {
-    config = { "\27LJ\2\2Ä\1\0\0\6\0\14\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\f\0005\2\3\0004\3\0\0=\3\4\0024\3\0\0=\3\5\0025\3\t\0005\4\a\0005\5\6\0=\5\b\4=\4\n\3=\3\v\2=\2\r\1B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\1\nnotes\f~/notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
+    config = { "\27LJ\2\2°\2\0\0\6\0\16\0\0216\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\14\0005\2\3\0004\3\0\0=\3\4\0025\3\6\0005\4\5\0=\4\a\3=\3\b\0025\3\f\0005\4\n\0005\5\t\0=\5\v\4=\4\a\3=\3\r\2=\2\15\1B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\1\22default_workspace\22on_the_way_to_10k\1\0\2\22on_the_way_to_10k\24~/on_the_way_to_10k\nnotes\f~/notes\19core.concealer\vconfig\1\0\0\1\0\1\16icon_preset\fdiamond\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
     loaded = true,
     path = "/home/andres/.local/share/nvim/site/pack/packer/start/neorg",
     url = "https://github.com/nvim-neorg/neorg"
@@ -223,7 +223,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: neorg
 time([[Config for neorg]], true)
-try_loadstring("\27LJ\2\2Ä\1\0\0\6\0\14\0\0196\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\f\0005\2\3\0004\3\0\0=\3\4\0024\3\0\0=\3\5\0025\3\t\0005\4\a\0005\5\6\0=\5\b\4=\4\n\3=\3\v\2=\2\r\1B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\1\nnotes\f~/notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+try_loadstring("\27LJ\2\2°\2\0\0\6\0\16\0\0216\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\14\0005\2\3\0004\3\0\0=\3\4\0025\3\6\0005\4\5\0=\4\a\3=\3\b\0025\3\f\0005\4\n\0005\5\t\0=\5\v\4=\4\a\3=\3\r\2=\2\15\1B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\1\22default_workspace\22on_the_way_to_10k\1\0\2\22on_the_way_to_10k\24~/on_the_way_to_10k\nnotes\f~/notes\19core.concealer\vconfig\1\0\0\1\0\1\16icon_preset\fdiamond\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
 time([[Config for neorg]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
