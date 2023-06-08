@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 14
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -243,6 +243,15 @@ mode "$mode_launcher" {
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
+
+# Assign programs to workspaces
+# to find the class of an application, open it, 
+# open a terminal, type "xprop", this causes mouse to become a cross.
+# click window and you will see some info on the terminal. 
+# look for WM_CLASS and look at the second value.
+
+# There is also assign keyword but I dont understand difference in docs
+for_window [class="firefox"] move to workspace 1
 
 # assign application to workspace
 
