@@ -23,6 +23,10 @@ font pango:DejaVu Sans Mono 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Note that --no-startup-id is a flag that must be included for any exec or 
+# exec_always call that does not create a window otherwise, on empty workspace, 
+# i3 mouse will always indicate loading. 
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -30,7 +34,8 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock i3lock --nofork
 
-bindsym $mod+Tab exec "i3lock --image=$HOME/Pictures/neon_bar.jpg"
+# For locking screen
+bindsym $mod+Tab exec "i3lock --image=$HOME/Pictures/neon_bar.png"
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -91,13 +96,13 @@ bindsym $mod+Shift+Right move right
 # Set the default layout. The deault is horizontal for wide monitors and 
 # vertical for thin ones.
 # workspace_layout default|stacking|tabbed
-# workspace_layout stacking
+workspace_layout stacking
 
-# split in horizontal orientation
-# bindsym $mod+h split h
+# split in horizontal orientation (accanto)
+bindsym $mod+a split h
 
 # split in vertical orientation
-# bindsym $mod+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -127,10 +132,10 @@ bindsym $mod+space floating toggle
 #################### END OF FLOATING WINDOWS ###################################
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -210,7 +215,7 @@ bar {
 }
 
 # swap caps with esc
-exec_always "setxkbmap -option caps:swapescape"
+exec_always --no-startup-id "setxkbmap -option caps:swapescape"
 
 # set the rate of the keyboard. 
 # the first number is the delay after which a keyboard press 
@@ -218,10 +223,10 @@ exec_always "setxkbmap -option caps:swapescape"
 # how fast it can repeat if it keep it pressed. 
 # For more info
 # https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Using_xset
-exec_always "xset r rate 200 50"
+exec_always --no-startup-id "xset r rate 200 50"
 
-# For setting backgroun run: 
-exec_always "feh --bg-scale $HOME/Pictures/neon_bar.jpg"
+# Set Background
+exec_always --no-startup-id "feh --bg-scale $HOME/Pictures/neon_bar.jpg"
 
 # set binding modes
 # In this case we are creating a mode called launcher
