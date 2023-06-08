@@ -43,8 +43,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -87,6 +85,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+#################### Layout Specification ######################################
+
+
+# Set the default layout. The deault is horizontal for wide monitors and 
+# vertical for thin ones.
+# workspace_layout default|stacking|tabbed
+# workspace_layout stacking
+
 # split in horizontal orientation
 # bindsym $mod+h split h
 
@@ -101,11 +107,24 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
+#################### FLOATING WINDOWS ##########################################
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space floating toggle
+
+# sets min/max size of floating window as width x height
+# if width or height are -1, the value is unconstrained
+# if 0 or undefined, i3 will use default value
+# floating_minimum_size 75 x 50
+# floating_maximum_size -1 x -1
+
+#################### END OF FLOATING WINDOWS ###################################
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -203,6 +222,22 @@ exec_always "xset r rate 200 50"
 
 # For setting backgroun run: 
 exec_always "feh --bg-scale $HOME/Pictures/neon_bar.jpg"
+
+# set binding modes
+# In this case we are creating a mode called launcher
+# I enter this mode with the command
+# and define bindings valid in that mode. Note all other bindings will not 
+# work in this mode
+set $mode_launcher Launch: [f]irefox
+bindsym $mod+o mode "$mode_launcher"
+
+mode "$mode_launcher" {
+    bindsym f exec firefox
+
+    # It is good practice to define bindings to exit the mode
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
 
 # assign application to workspace
 
