@@ -258,7 +258,9 @@ for_window [class="firefox"] move to workspace 1
 # install locker i3 lock, i3lock color, betterlockscreen
 
 # network NetworkManager - good
+
 # file manager - ranger or lf 
 
-# pulse applett 
-# bar 
+# try optimus manager for gpu manager
+# use optimus to generate config for x 
+
