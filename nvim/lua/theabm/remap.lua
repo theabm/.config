@@ -8,8 +8,10 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "Y", "y$")
 
 --faster writing and quitting
-vim.keymap.set("n", "<leader>ww", ":w<CR>")
-vim.keymap.set("n", "<leader>xx", ":q<CR>")
+-- m (modify)
+-- t (terminal)
+vim.keymap.set("n", "m", ":w<CR>")
+vim.keymap.set("n", "t", ":q<CR>")
 
 -- Move text up and down in visual line mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
