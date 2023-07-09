@@ -223,7 +223,7 @@ exec_always --no-startup-id "setxkbmap -option caps:swapescape"
 # how fast it can repeat if it keep it pressed. 
 # For more info
 # https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Using_xset
-exec_always --no-startup-id "xset r rate 200 50"
+exec_always --no-startup-id "xset r rate 200 100"
 
 # Set Background
 exec_always --no-startup-id "feh --bg-scale $HOME/Pictures/neon_bar.jpg"

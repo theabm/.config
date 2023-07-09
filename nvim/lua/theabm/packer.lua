@@ -119,5 +119,6 @@ return require('packer').startup(function(use)
     }
 
     use 'tpope/vim-surround'
+    use 'lervag/vimtex'
 
 end)
